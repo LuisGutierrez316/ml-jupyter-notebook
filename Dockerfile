@@ -57,7 +57,7 @@ RUN pip install 'qiskit[terra,aer,optimization,finance,machine-learning,experime
 
 ## installing this branch of qiskit-nature for reproducibility as this was what I originally worked with. this branch also has
 ## the modified bond lengths (3.8 angstroms), just like the qiskit-research I'm cloning after this step.
-RUN git clone --branch real_bond_length https://github.com/thepineapplepirate/qiskit-nature.git && cd qiskit-nature && pip install
+RUN git clone --branch real_bond_length https://github.com/thepineapplepirate/qiskit-nature.git && cd qiskit-nature && pip install .
 
 
 ##INSTALL qiskit research
