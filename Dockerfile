@@ -53,8 +53,7 @@ RUN pip install --no-cache-dir voila
 RUN pip install numpy==1.20.0
 
 ## INSTALL qiskit pypi packages
-##RUN pip install 'qiskit[all]'
-RUN pip install 'qiskit[terra==0.23,aer,optimization,finance,machine-learning,experiments,nature]'
+RUN pip install 'qiskit[all]'
 
 ##INSTALL qiskit research, my branch with 3.8 angstrom bond lengths
 RUN git clone --branch real_bond_lengths https://github.com/thepineapplepirate/qiskit-research.git && cd qiskit-research && pip install .
