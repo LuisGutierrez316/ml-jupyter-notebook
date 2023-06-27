@@ -53,7 +53,8 @@ RUN pip install --no-cache-dir voila
 RUN pip install numpy==1.20.0
 
 ## INSTALL qiskit pypi packages
-RUN pip install 'qiskit[all]'
+##RUN pip install 'qiskit[all]'
+RUN pip install 'qiskit[terra==0.23,aer,optimization,finance,machine-learning,experiments,nature]'
 
 ##INSTALL qiskit research, my branch with 3.8 angstrom bond lengths
 RUN git clone --branch real_bond_lengths https://github.com/thepineapplepirate/qiskit-research.git && cd qiskit-research && pip install .
@@ -105,6 +106,9 @@ RUN curl -L https://raw.githubusercontent.com/qiskit-community/qiskit-research/m
 
 ## Add new alternative to IBMQ
 RUN pip install qiskit_ibm_provider
+
+## Install runtime, if it wasn't already?
+RUN pip install qiskit-ibm-runtime
 
 RUN chown -R $NB_USER:users /home/$NB_USER /import
 
